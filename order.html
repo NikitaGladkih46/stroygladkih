@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оставить заявку на расчет стоимости — ИП Гладких А.С.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+                    <strong>ГЛАДКИХ А.С.</strong>
+                    <span>СТРОИТЕЛЬНАЯ КОМПАНИЯ</span>
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="index.html#about">О компании</a>
+                <a href="index.html#services">Виды деятельности</a>
+                <a href="commercial.html">Коммерческое строительство</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header-contacts">
+                <a href="order.html" class="btn btn-header">Заказать расчет</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="vacancy" style="padding: 100px 0; min-height: calc(100vh - 200px); display: flex; align-items: center;">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-grid">
+                    <div class="form-info">
+                        <h2>Запрос расчета стоимости</h2>
+                        <p>Заполните форму, чтобы отправить техническое задание или описание вашего строительного проекта. Андрей Сергеевич лично изучит параметры объекта и свяжется с вами для детального обсуждения сметы.</p>
+                        <div class="contacts-list" style="margin-top: 30px;">
+                            <div class="contact-item" style="margin-bottom: 15px;"><strong>Форма оплаты:</strong> Наличный и безналичный расчет (работаем с НДС и без)</div>
+                            <div class="contact-item"><strong>География работ:</strong> Строительство объектов любой сложности</div>
+                        </div>
+                    </div>
+                    <div class="form-inputs-block">
+                        <form id="jobForm">
+                            <div class="form-group">
+                                <input type="text" id="name" required placeholder="Ваше имя / Название организации">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" required placeholder="Контактный телефон">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="experience" rows="5" placeholder="Опишите ваш объект (тип здания, площадь, необходимые работы, локация)..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-form">Отправить запрос на расчет</button>
+                        </form>
+                        <div id="formMessage" class="hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <strong>ИП Гладких А.С.</strong>
+                <p>Промышленно-гражданское строительство и механизированная отделка.</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

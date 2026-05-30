@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИП Гладких А.С. — Строительная компания</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <strong>ГЛАДКИХ А.С.</strong>
+                <span>СТРОИТЕЛЬНАЯ КОМПАНИЯ</span>
+            </div>
+            <nav>
+                <a href="#about">О компании</a>
+                <a href="#services">Виды деятельности</a>
+                <a href="commercial.html">Коммерческое строительство</a>
+                <a href="#vacancy">Вакансии</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header-contacts">
+                <a href="#vacancy" class="btn btn-header">Подать заявку</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <h1>Промышленное, гражданское и коммерческое строительство</h1>
+            <p>Индивидуальный предприниматель Гладких Андрей Сергеевич. Профессиональный монтаж стальных конструкций, монолитные работы и механизированная безвоздушная окраска объектов.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn">Наши направления</a>
+                <a href="commercial.html" class="btn btn-secondary">Строительство для бизнеса</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Надежность и опыт</span>
+                <h2>О компании</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-main">
+                    <p><strong>ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ ГЛАДКИХ АНДРЕЙ СЕРГЕЕВИЧ</strong> — строительная организация, выполняющая полный комплекс общестроительных, монтажных и специализированных отделочных работ.</p>
+                </div>
+                <div class="about-text-sub">
+                    <p>Мы осуществляем возведение объектов гражданского, промышленного и коммерческого назначения. Строго соблюдаем заложенные сроки, инженерные регламенты и государственные стандарты качества. Наша главная задача — создание долговечной infrastructure для жизни и бизнеса.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Что мы делаем</span>
+                <h2>Виды деятельности</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" onclick="document.getElementById('pgs').scrollIntoView({behavior: 'smooth'});" style="cursor: pointer;">
+                    <div class="card-icon">01</div>
+                    <h3>Промышленное и гражданское строительство</h3>
+                    <p>Строительство и реконструкция зданий и сооружений любой сложности под ключ. От фундамента до благоустройства. <span style="color: #a6192e; font-weight: 600; display: block; margin-top: 10px;">Подробнее и фото &rarr;</span></p>
+                </div>
+                
+                <div class="service-card" onclick="window.location.href='commercial.html';" style="cursor: pointer;">
+                    <div class="card-icon">02</div>
+                    <h3>Коммерческое строительство</h3>
+                    <p>Строительство ангаров, складов, торговых центров, магазинов, офисов и цехов. Реализация проектов под ключ. <span style="color: #a6192e; font-weight: 600; display: block; margin-top: 10px;">Подробнее &rarr;</span></p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="card-icon">03</div>
+                    <h3>Бетонные и железобетонные работы</h3>
+                    <p>Устройство фундаментов промышленного заложения, возведение монолитных каркасов зданий, заливка пролетов и стен.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="card-icon">04</div>
+                    <h3>Монтаж стальных конструкций</h3>
+                    <p>Сборка и высокоточный монтаж несущих металлических каркасов, ферм и модульных элементов для быстровозводимых зданий.</p>
+                </div>
+
+                <div class="service-card" onclick="document.getElementById('painting').scrollIntoView({behavior: 'smooth'});" style="cursor: pointer;">
+                    <div class="card-icon">05</div>
+                    <h3>Безвоздушная окраска</h3>
+                    <p>Высокопроизводительное окрашивание больших площадей: фасадов зданий, внутренних стен и потолков. <span style="color: #a6192e; font-weight: 600; display: block; margin-top: 10px;">Посмотреть фото &rarr;</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pgs" class="pgs-section">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Капитальное строительство</span>
+                <h2>Промышленное и гражданское строительство</h2>
+            </div>
+            
+            <div class="pgs-content">
+                <div class="pgs-info-block">
+                    <div class="pgs-text">
+                        <p>ИП Гладких А.С. осуществляет комплексное строительство и реконструкцию объектов ПГС любого масштаба. Мы выполняем полный цикл работ — от проектирования, нулевого цикла и заложения фундамента до финишной внутренней отделки и комплексного благоустройства прилегающей территории. Возводим надежные монолитные, металлокаркасные и каменные здания.</p>
+                    </div>
+                    
+                    <div class="pgs-features">
+                        <div class="feature-item">
+                            <h4>Полный цикл под ключ</h4>
+                            <p>Берем на себя все этапы: земляные работы, возведение стен, монтаж инженерных систем и сдачу объекта.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Инженерный потенциал</h4>
+                            <p>Собственный штат квалифицированных рабочих и опытных инженеров различных строительных специальностей.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Гибкие условия</h4>
+                            <p>Выполняем работы любой технической сложности. Работаем по любым удобным формам наличного и безналичного расчета.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pgs-tags-container">
+                    <h3>Наши технологические возможности и виды работ:</h3>
+                    <div class="pgs-tags">
+                        <span>Фундамент и сваи</span><span>Монолитные работы</span><span>Металлический каркас</span>
+                        <span>Сэндвич-панели</span><span>Кирпичная кладка</span><span>Газосиликатный блок</span>
+                        <span>Промышленные и топпинг-полы</span><span>Полусухая стяжка</span><span>Кровля любой сложности</span>
+                        <span>Вентилируемый фасад</span><span>Сайдинг и профлист</span><span>Окна и двери</span>
+                        <span>Отделочные работы</span><span>Безвоздушная окраска</span><span>Водопровод и канализация</span>
+                        <span>Отопительные системы</span><span>Благоустройство территории</span><span>Асфальтирование и плитка</span>
+                    </div>
+                </div>
+                
+                <div class="pgs-gallery">
+                    <div class="gallery-item"><img src="image/4.png" alt="Строительный объект"></div>
+                    <div class="gallery-item"><img src="image/5.png" alt="Строительный объект"></div>
+                    <div class="gallery-item"><img src="image/6.png" alt="Строительный объект"></div>
+                    <div class="gallery-item"><img src="image/7.png" alt="Строительный объект"></div>
+                    <div class="gallery-item"><img src="image/8.png" alt="Строительный объект"></div>
+                    <div class="gallery-item"><img src="image/9.png" alt="Строительный объект"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="painting" class="painting-section">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Профессиональная отделка</span>
+                <h2>Безвоздушная окраска фасадов, стен и потолков</h2>
+            </div>
+            
+            <div class="painting-content">
+                <div class="painting-text">
+                    <p>Мы выполняем высокопроизводительное окрашивание коммерческих, промышленных и гражданских объектов с использованием профессиональных аппаратов безвоздушного распыления.</p>
+                    <ul class="painting-advantages">
+                        <li><strong>Идеальная гладкость:</strong> Нанесение состава без потеков, следов валиков или кистей.</li>
+                        <li><strong>Экономия времени:</strong> Скорость работ в 4-5 раз выше классических методов окраски.</li>
+                        <li><strong>Любые поверхности:</strong> Эффективно прокрашиваем бетон, кирпич, металлоконструкции, фактурные потолки и фасады.</li>
+                    </ul>
+                </div>
+                
+                <div class="painting-gallery">
+                    <div class="gallery-item">
+                        <img src="image/1.png" alt="Безвоздушная окраска">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/2.png" alt="Безвоздушная окраска">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/3.png" alt="Безвоздушная окраска">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vacancy" class="vacancy">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-grid">
+                    <div class="form-info">
+                        <h2>Работа у нас</h2>
+                        <p>Мы регулярно расширяем штат и ищем опытных строителей, монтажников, бетонщиков и маляров на безвоздушные аппараты. Оставьте свои данные, и Андрей Сергеевич свяжется с вами.</p>
+                        <div class="contacts-list">
+                            <div class="contact-item"><strong>Основной вид деятельности:</strong> ПГС и отделочные работы</div>
+                        </div>
+                    </div>
+                    <div class="form-inputs-block">
+                        <form id="jobForm">
+                            <div class="form-group">
+                                <input type="text" id="name" required placeholder="Ваше имя и фамилия">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" required placeholder="Номер телефона">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="experience" rows="4" placeholder="Расскажите о вашем строительном опыте..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-form">Отправить заявку в компанию</button>
+                        </form>
+                        <div id="formMessage" class="hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <strong>ИП Гладких А.С.</strong>
+                <p>Промышленно-гражданское строительство и механизированная отделка.</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
