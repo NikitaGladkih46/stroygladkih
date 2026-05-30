@@ -2,40 +2,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('jobForm');
     const formMessage = document.getElementById('formMessage');
 
-    form.addEventListener('submit', function(event) {
-//Отменяем стандартную перезагрузку страницы при отправке
-        event.preventDefault();
+    if (!form) return;
 
-//Собираем данные из полей (пригодится для отправки на бэкенд в будущем)
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Запрещаем стандартную перезагрузку страницы
+
         const name = document.getElementById('name').value.trim();
         const phone = document.getElementById('phone').value.trim();
-        const experience = document.getElementById('experience').value.trim();
 
-//Простая валидация
         if (name === '' || phone === '') {
             showMessage('Пожалуйста, заполните обязательные поля.', 'error');
             return;
         }
 
-// Имитируем отправку на сервер
         formMessage.classList.remove('hidden');
-        formMessage.textContent = 'Отправка заявки...';
-        formMessage.className = 'success'; // Временный класс для статуса
+        formMessage.textContent = 'Отправка данных...';
+        formMessage.className = 'success';
 
-        setTimeout(() => {
-//Здесь можно настроить реальную отправку, например через Fetch API на email или в Telegram
-            
-//Выводим красивый ответ пользователю
-            showMessage(`Спасибо, ${name}! Ваша заявка успешно отправлена. Андрей Сергеевич свяжется с вами в ближайшее время.`, 'success');
-            
-//Сбрасываем форму
-            form.reset();
-        }, 1500);
+// Отправляем данные на Formspree через fetch
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                showMessage(`Спасибо, ${name}! Ваша заявка успешно отправлена. Андрей Сергеевич свяжется с вами в ближайшее время.`, 'success');
+                form.reset();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        showMessage(data['errors'].map(error => error['message']).join(", "), 'error');
+                    } else {
+                        showMessage('Ой! Произошла проблема при отправке формы', 'error');
+                    }
+                })
+            }
+        }).catch(error => {
+            showMessage('Произошла ошибка сети. Попробуйте позже.', 'error');
+        });
     });
 
     function showMessage(text, type) {
         formMessage.textContent = text;
-        formMessage.className = type; // добавляет класс 'success' или 'error'
+        formMessage.className = type;
         formMessage.classList.remove('hidden');
     }
 });

@@ -43,17 +43,19 @@
                         </div>
                     </div>
                     <div class="form-inputs-block">
-                        <form id="jobForm">
+                        <form id="jobForm" action="https://formspree.io/f/xdajvgao" method="POST">
+                            <input type="hidden" name="_subject" value="Заявка с сайта Гладких А.С.">
+                            
                             <div class="form-group">
-                                <input type="text" id="name" required placeholder="Ваше имя / Название организации">
+                                <input type="text" id="name" name="Имя/Компания" required placeholder="Ваше имя...">
                             </div>
                             <div class="form-group">
-                                <input type="tel" id="phone" required placeholder="Контактный телефон">
+                                <input type="tel" id="phone" name="Телефон" required placeholder="Номер телефона...">
                             </div>
                             <div class="form-group">
-                                <textarea id="experience" rows="5" placeholder="Опишите ваш объект (тип здания, площадь, необходимые работы, локация)..."></textarea>
+                                <textarea id="experience" name="Сообщение/Опыт" rows="4" placeholder="Текст сообщения..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-form">Отправить запрос на расчет</button>
+                            <button type="submit" class="btn btn-form">Отправить заявку в компанию</button>
                         </form>
                         <div id="formMessage" class="hidden"></div>
                     </div>
