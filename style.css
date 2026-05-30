@@ -1149,3 +1149,22 @@ footer strong {
         text-align: left !important;
     }
 }
+/* Обеспечиваем отображение фоновых изображений на мобильных устройствах */
+@media (max-width: 768px) {
+    .object-image-placeholder,
+    .img-done-1,
+    .img-done-2,
+    .img-done-3,
+    .img-done-4,
+    .img-current-1,
+    .img-current-2,
+    .img-current-3,
+    .img-current-4 {
+        display: block !important;
+        width: 100% !important;
+        height: 200px !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+}
