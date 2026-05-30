@@ -907,114 +907,137 @@ header nav a {
 
 /* АДАПТИВНАЯ ВЕРСИЯ ДЛЯ МОБ УСТРОЙСТВ */
 @media (max-width: 768px) {
-    
     .container {
-        width: 92%;
-        padding: 40px 0;
+        width: 90% !important;
+        padding: 30px 0 !important;
+    }
+
+    header {
+        height: auto !important;
+        padding: 15px 0 !important;
     }
 
     .header-container {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 15px 0;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        text-align: center !important;
     }
 
     header nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 15px;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px 15px !important;
+        margin: 5px 0 !important;
     }
 
     header nav a {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
+        padding: 5px 0 !important;
     }
 
     .header-contacts {
-        width: 100%;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
 
     .btn-header {
-        width: 100%; 
-        text-align: center;
-        padding: 10px 20px;
+        width: 100% !important;
+        max-width: 300px !important;
+        text-align: center !important;
+        padding: 10px 20px !important;
+    }
+
+    .hero {
+        padding: 60px 0 !important;
+        text-align: center !important;
     }
 
     .hero h1 {
-        font-size: 1.8rem; 
-        line-height: 1.3;
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.95rem !important;
     }
 
     .features-grid, 
     .services-grid, 
     .objects-grid, 
     .info-grid {
+        display: grid !important;
         grid-template-columns: 1fr !important; 
         gap: 20px !important;
     }
 
     .vacancy-container,
     .order-container {
-        flex-direction: column !important; 
-        gap: 30px;
+        flex-direction: column !important;
+        gap: 25px !important;
     }
 
     .vacancy-info, 
     .form-inputs-block,
     .order-info {
-        width: 100% !important; 
+        width: 100% !important;
     }
 
     .form-inputs-block {
-        padding: 25px 20px; 
+        padding: 20px 15px !important;
     }
 
-    .btn {
-        width: 100%; 
-        text-align: center;
+    .btn-form {
+        width: 100% !important;
+    }
+
+    .contacts-container {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .contacts-info-side, 
+    .requisites-side {
+        width: 100% !important;
     }
 
     .requisites-table tr {
-        display: flex;
-        flex-direction: column; 
-        padding: 10px 0;
+        display: flex !important;
+        flex-direction: column !important; 
+        padding: 10px 0 !important;
     }
 
     .table-label {
         width: 100% !important;
-        padding-bottom: 4px;
-        font-size: 0.85rem;
+        padding: 0 0 4px 0 !important;
+        font-size: 0.85rem !important;
     }
 
     .table-value {
         width: 100% !important;
-        padding-top: 0;
-        word-break: break-all; 
+        padding: 0 !important;
+        word-break: break-all !important;
     }
 
     .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 30px 0;
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+        padding: 20px 0 !important;
     }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem !important;
     }
-    
     .logo strong {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
     }
-    
     .logo span {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
 }
